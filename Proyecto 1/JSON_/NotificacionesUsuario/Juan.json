@@ -1,0 +1,90 @@
+[
+  {
+    "ID": 21,
+    "TIPO": "Centro Computo",
+    "REMITENTE": "it@empresa.com",
+    "DESCRIPCIÓN": "oh mi dios...",
+    "FECHA": "10/04/2025 12:00:00 a. m.",
+    "ESTADO": true
+  },
+  {
+    "ID": 31,
+    "TIPO": "Skibidi pana",
+    "REMITENTE": "it@empresa.com",
+    "DESCRIPCIÓN": "el ajedrez ta dos tres mas dos que tres",
+    "FECHA": "10/04/2025 12:00:00 a. m.",
+    "ESTADO": true
+  },
+  {
+    "ID": 19,
+    "TIPO": "dostres",
+    "REMITENTE": "sistema@empresa.com",
+    "DESCRIPCIÓN": "muchos",
+    "FECHA": "09/04/2025 12:00:00 a. m.",
+    "ESTADO": false
+  },
+  {
+    "ID": 23,
+    "TIPO": "Biblioteca",
+    "REMITENTE": "direccion@empresa.com",
+    "DESCRIPCIÓN": "no",
+    "FECHA": "09/04/2025 12:00:00 a. m.",
+    "ESTADO": false
+  },
+  {
+    "ID": 29,
+    "TIPO": "oigan y las pipshas?",
+    "REMITENTE": "sistema@empresa.com",
+    "DESCRIPCIÓN": "cambien la descripcion pibes",
+    "FECHA": "09/04/2025 12:00:00 a. m.",
+    "ESTADO": false
+  },
+  {
+    "ID": 33,
+    "TIPO": "cisco me quita años de vida",
+    "REMITENTE": "direccion@empresa.com",
+    "DESCRIPCIÓN": "quizas",
+    "FECHA": "09/04/2025 12:00:00 a. m.",
+    "ESTADO": false
+  },
+  {
+    "ID": 20,
+    "TIPO": "Fiesta",
+    "REMITENTE": "rh@empresa.com",
+    "DESCRIPCIÓN": "Botones de gomita",
+    "FECHA": "08/04/2025 12:00:00 a. m.",
+    "ESTADO": false
+  },
+  {
+    "ID": 30,
+    "TIPO": "bloodborne goty",
+    "REMITENTE": "rh@empresa.com",
+    "DESCRIPCIÓN": "aguante bloodgod",
+    "FECHA": "08/04/2025 12:00:00 a. m.",
+    "ESTADO": false
+  },
+  {
+    "ID": 22,
+    "TIPO": "Club de Programación",
+    "REMITENTE": "admin@empresa.com",
+    "DESCRIPCIÓN": "wayando",
+    "FECHA": "07/04/2025 12:00:00 a. m.",
+    "ESTADO": false
+  },
+  {
+    "ID": 32,
+    "TIPO": "aaaaaaaaa",
+    "REMITENTE": "admin@empresa.com",
+    "DESCRIPCIÓN": "ey",
+    "FECHA": "07/04/2025 12:00:00 a. m.",
+    "ESTADO": true
+  },
+  {
+    "ID": 36,
+    "TIPO": "bloodborne goty",
+    "REMITENTE": "rh@empresa.com",
+    "DESCRIPCIÓN": "pancho barraza",
+    "FECHA": "08/04/2025 12:00:00 a. m.",
+    "ESTADO": false
+  }
+]

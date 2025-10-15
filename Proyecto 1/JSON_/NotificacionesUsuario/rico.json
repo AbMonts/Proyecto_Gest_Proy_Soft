@@ -1,0 +1,26 @@
+[
+  {
+    "ID": 1,
+    "TIPO": "baja",
+    "REMITENTE": "yo",
+    "DESCRIPCIÓN": "ooooola tilin",
+    "FECHA": "06/05/2025 05:17:08 p. m.",
+    "ESTADO": false
+  },
+  {
+    "ID": 3,
+    "TIPO": "baja",
+    "REMITENTE": "admon01",
+    "DESCRIPCIÓN": "ooooooooooola",
+    "FECHA": "06/05/2025 05:26:47 p. m.",
+    "ESTADO": false
+  },
+  {
+    "ID": 4,
+    "TIPO": "Alta",
+    "REMITENTE": "admon01",
+    "DESCRIPCIÓN": "no habrá clases :)",
+    "FECHA": "06/05/2025 05:30:49 p. m.",
+    "ESTADO": true
+  }
+]
