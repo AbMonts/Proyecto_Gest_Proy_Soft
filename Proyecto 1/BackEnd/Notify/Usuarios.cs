@@ -103,6 +103,7 @@ namespace Not.Backend
             return false;
         }
 
+        //-------------------------------Separar: operaciones para admin ----------------------------------------------------------------
         public DataTable mostrar_usuarios()
         {
             DataTable dataTable = new DataTable();
@@ -132,6 +133,7 @@ namespace Not.Backend
             return dataTable;
         }
 
+
         public bool crear_admin(Usuario u)
         {
             MySqlTransaction tran = null;
@@ -142,7 +144,8 @@ namespace Not.Backend
                 tran = c.GetConnection().BeginTransaction();
 
                 MySqlConnection connection = c.GetConnection();
-                string query = "insert into usuario(usuario, password, nombre, correo, rol) values (@user, sha2(@pass, 256), @nombre, @correo, 'Admin')";
+                string query = "INSERT INTO administrador (nombre, usuario, password_ad, correo) " +
+                              "VALUES (@nombre, @user, SHA2(@pass, 256), @correo)";
 
                 MySqlCommand cmd = new MySqlCommand(query, c.GetConnection());
 
@@ -181,7 +184,8 @@ namespace Not.Backend
                 tran = c.GetConnection().BeginTransaction();
 
                 MySqlConnection connection = c.GetConnection();
-                string query = "insert into usuario(usuario, password, nombre, correo, rol) values (@user, sha2(@pass, 512), @nombre, @correo, 'Usuario')";
+                string query = "INSERT INTO usuario (usuario, password, nombre, correo, id_admin) " +
+                               "VALUES (@user, SHA2(@pass, 256), @nombre, @correo, @id_admin)";
 
                 MySqlCommand cmd = new MySqlCommand(query, c.GetConnection());
 
@@ -214,7 +218,8 @@ namespace Not.Backend
         {
             MySqlTransaction tran = null;
             bool res = true;
-            string query = "delete from usuario where idu = @id";
+            string query = "DELETE FROM usuario WHERE id_usario = @id";
+
 
             try
             {
@@ -249,7 +254,8 @@ namespace Not.Backend
         {
             MySqlTransaction tran = null;
             bool res = true;
-            string query = "update usuario set usuario = @user, password = sha2(@pass, 256), nombre = @nombre, correo = @correo where idu = @id";
+            string query = "UPDATE usuario SET usuario = @user, password = SHA2(@pass, 256), " +
+                                       "nombre = @nombre, correo = @correo WHERE id_usario = @id";
 
             try
             {

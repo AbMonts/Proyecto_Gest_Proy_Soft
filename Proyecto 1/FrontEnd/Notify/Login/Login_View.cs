@@ -175,7 +175,7 @@ namespace Proyecto_1.FrontEnd.Login
             {
                 if(ls.AutenticarUsuario(txtUsuario.Text, txtPassword.Text))
                 {
-                    if (ls.rol(txtUsuario.Text, txtPassword.Text) == "Admin")
+                    if (ls.Rol(txtUsuario.Text, txtPassword.Text) == "Admin")
                     {
                         Menu_Admin ma = new Menu_Admin(1);
                         ma.Show();

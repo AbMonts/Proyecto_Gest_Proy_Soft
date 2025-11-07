@@ -44,7 +44,7 @@ namespace Not.Backend
             {
                 c.OpenConnection();
 
-                string query = "select * from grupo";
+                string query = "SELECT * FROM grupo";
                 using (MySqlCommand command = new MySqlCommand(query, c.GetConnection()))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
@@ -75,14 +75,16 @@ namespace Not.Backend
                 tran = c.GetConnection().BeginTransaction();
 
                 MySqlConnection connection = c.GetConnection();
-                string query = "insert into grupo (nombre, descripcion) values (@nombre, @descripcion)";
+                string query = @"INSERT INTO grupo (nombre, descripcion, numero_usuarios, id_admin)
+                 VALUES (@nombre, @descripcion, @num_usuarios, @id_admin)";
 
                 MySqlCommand cmd = new MySqlCommand(query, c.GetConnection());
 
-                // insert into grupo (numerousuarios, nombre, descripcion, ida) values
-
                 cmd.Parameters.AddWithValue("@nombre", g.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", g.descripcion);
+                cmd.Parameters.AddWithValue("@num_usuarios", g.numero_usuarios);
+                cmd.Parameters.AddWithValue("@id_admin", g.id_admin);
+
 
                 cmd.ExecuteNonQuery();
                 tran.Commit();
@@ -108,7 +110,7 @@ namespace Not.Backend
         {
             MySqlTransaction tran = null;
             bool res = true;
-            string query = "delete from grupo where idg = @id";
+            string query = "DELETE FROM grupo WHERE id = @id";
 
             try
             {
@@ -143,7 +145,12 @@ namespace Not.Backend
         {
             MySqlTransaction tran = null;
             bool res = true;
-            string query = "update grupo set nombre = @nombre, descripcion = @descripcion where idg = @id";
+            string query = @"UPDATE grupo
+                 SET nombre = @nombre,
+                     descripcion = @descripcion,
+                     numero_usuarios = @num_usuarios,
+                     id_admin = @id_admin
+                 WHERE id = @id";
 
             try
             {
@@ -153,7 +160,10 @@ namespace Not.Backend
                 {
                     cmd.Parameters.AddWithValue("@nombre", g.nombre);
                     cmd.Parameters.AddWithValue("@descripcion", g.descripcion);
+                    cmd.Parameters.AddWithValue("@num_usuarios", g.numero_usuarios);
+                    cmd.Parameters.AddWithValue("@id_admin", g.id_admin);
                     cmd.Parameters.AddWithValue("@id", g.id);
+
 
                     int filas = cmd.ExecuteNonQuery();
                     res = filas > 0;

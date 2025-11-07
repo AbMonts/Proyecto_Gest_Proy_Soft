@@ -62,6 +62,8 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -92,6 +94,7 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -101,6 +104,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
     </Reference>
@@ -110,8 +114,12 @@
     <Compile Include="BackEnd\LoginLogin\LoginService.cs" />
     <Compile Include="BackEnd\LoginLogin\RegistroService.cs" />
     <Compile Include="BackEnd\Notify\Grupo.cs" />
+    <Compile Include="BackEnd\Notify\GrupoR.cs" />
     <Compile Include="BackEnd\Notify\Notificacion.cs" />
+    <Compile Include="BackEnd\Notify\NotificacionR.cs" />
+    <Compile Include="BackEnd\Notify\Usuario.cs" />
     <Compile Include="BackEnd\Notify\Usuarios.cs" />
+    <Compile Include="FrontEnd\Helpers\MaterialSkinHelper.cs" />
     <Compile Include="FrontEnd\Notify\Login\Login_View.cs">
       <SubType>Form</SubType>
     </Compile>

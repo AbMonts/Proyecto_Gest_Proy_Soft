@@ -191,7 +191,6 @@
             this.dgv_grup.RowTemplate.Height = 24;
             this.dgv_grup.Size = new System.Drawing.Size(614, 142);
             this.dgv_grup.TabIndex = 6;
-            this.dgv_grup.CellClick += dgv_grup_CellClick;
             // 
             // menu_panel
             // 

@@ -3,6 +3,9 @@ using Proyecto_1.BackEnd;
 using System.Collections.Generic;
 using System.Data;
 using System;
+using Mysqlx.Crud;
+using Mysqlx.Cursor;
+using Proyecto_1.BackEnd.Notify;
 
 namespace Not.Backend
 {
@@ -40,7 +43,8 @@ namespace Not.Backend
             try
             {
                 c.OpenConnection();
-                string query = "select * from notificacion";
+                string query = "SELECT * FROM notificacion";
+
                 using (MySqlCommand command = new MySqlCommand(query, c.GetConnection()))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
@@ -63,11 +67,18 @@ namespace Not.Backend
             {
                 c.OpenConnection();
                 string username = u.usuario;
-                string query = "select idn as ID, tipo as TIPO, remitente as REMITENTE, descripcion as DESCRIPCIÓN, fecha as FECHA from notificacion where receptor = " + '"' + username + '"' + " order by fecha desc";
+                string query = @"SELECT id_notificacion AS ID, tipo AS TIPO, remitente AS REMITENTE,
+                        descripcion AS DESCRIPCIÓN, fecha AS FECHA
+                 FROM notificacion
+                 WHERE receptor = @usuario
+                 ORDER BY fecha DESC";
+
                 using (MySqlCommand command = new MySqlCommand(query, c.GetConnection()))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                     {
+                        command.Parameters.AddWithValue("@usuario", u.usuario);
+
                         adapter.Fill(dataTable);
                     }
                 }
@@ -86,11 +97,19 @@ namespace Not.Backend
             {
                 c.OpenConnection();
                 string name = g.NOMBRE;
-                string query = "select n.idn as ID, n.tipo as TIPO, n.remitente as REMITENTE, n.descripcion as DESCRIPCIÓN, n.fecha as FECHA from notificacion n join grupo g on n.receptor = g.nombre where g.nombre  = " + '"' + name + '"' + " order by fecha desc";
+                string query = @"SELECT n.id_notificacion AS ID, n.tipo AS TIPO, n.remitente AS REMITENTE,
+                        n.descripcion AS DESCRIPCIÓN, n.fecha AS FECHA
+                 FROM notificacion n
+                 JOIN grupo g ON n.receptor = g.nombre
+                 WHERE g.nombre = @nombre
+                 ORDER BY n.fecha DESC";
+
                 using (MySqlCommand command = new MySqlCommand(query, c.GetConnection()))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                     {
+                        command.Parameters.AddWithValue("@nombre", g.NOMBRE);
+
                         adapter.Fill(dataTable);
                     }
                 }
@@ -131,7 +150,11 @@ namespace Not.Backend
             try
             {
                 c.OpenConnection();
-                string query = "select remitente as REMITENTE, descripcion as DESCRIPCIÓN, fecha as FECHA from notificacion where tipo = 'Importante' order by fecha desc";
+                string query = @"SELECT remitente AS REMITENTE, descripcion AS DESCRIPCIÓN, fecha AS FECHA
+                 FROM notificacion
+                 WHERE tipo = 'Importante'
+                 ORDER BY fecha DESC";
+
                 using (MySqlCommand command = new MySqlCommand(query, c.GetConnection()))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
@@ -157,14 +180,16 @@ namespace Not.Backend
                 tran = c.GetConnection().BeginTransaction();
 
                 // Creamos la query que se enviará a MySQL
-                string query = "insert into notificacion (tipo, remitente, receptor, descripcion) values (@tipo, @rem, @rec, @desc)";
+                string query = @"INSERT INTO notificacion (tipo, remitente, receptor, descripcion, id_admin)
+                 VALUES (@tipo, @rem, @rec, @desc, @idadmin)";
                 MySqlCommand cmd = new MySqlCommand(query, c.GetConnection());
 
-                // Parámetros de seguridad para evitar SQL Injection
                 cmd.Parameters.AddWithValue("@tipo", n.tipo);
                 cmd.Parameters.AddWithValue("@rem", n.remitente);
                 cmd.Parameters.AddWithValue("@rec", n.receptor);
                 cmd.Parameters.AddWithValue("@desc", n.descripcion);
+                //cmd.Parameters.AddWithValue("@idadmin", n.a); // no
+
 
                 // Ejecutamos la query y hacemos un commit para guardar los cambios en la base de datos
                 cmd.ExecuteNonQuery();
@@ -189,7 +214,7 @@ namespace Not.Backend
         {
             MySqlTransaction tran = null;
             bool res = true;
-            string query = "delete from notificacion where idn = @id";
+            string query = "DELETE FROM notificacion WHERE id_notificacion = @id";
 
             try
             {
@@ -223,7 +248,9 @@ namespace Not.Backend
         {
             MySqlTransaction tran = null;
             bool res = true;
-            string query = "update notificacion set tipo = @tipo, remitente = @rem, receptor = @rec, descripcion = @desc where idn = @id";
+            string query = @"UPDATE notificacion
+                 SET tipo = @tipo, remitente = @rem, receptor = @rec, descripcion = @desc
+                 WHERE id_notificacion = @id";
 
             try
             {
