@@ -103,7 +103,7 @@ namespace Not.Backend
             return false;
         }
 
-        //-------------------------------Separar: operaciones para admin ----------------------------------------------------------------
+        //------------------------------- operaciones para admin ----------------------------------------------------------------
         public DataTable mostrar_usuarios()
         {
             DataTable dataTable = new DataTable();
@@ -193,6 +193,7 @@ namespace Not.Backend
                 cmd.Parameters.AddWithValue("@pass", u.password);
                 cmd.Parameters.AddWithValue("@nombre", u.nombre);
                 cmd.Parameters.AddWithValue("@correo", u.correo);
+                cmd.Parameters.AddWithValue("@id_admin", u.id_admin = 1);
 
                 cmd.ExecuteNonQuery();
                 tran.Commit();

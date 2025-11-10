@@ -91,3 +91,17 @@ se esta usando en la clase notificacion
 
 Haciendo: Factorizando usuarios
 Hacer despues: refactorizar notificacion y grupo
+
+errores: 
+Se esta registrando admins en ves de usuarios.
+
+
+Cambios: 
+Ya registra usuario.
+inicia y registra bien usuarios.
+
+usuarioJuan
+juan123
+
+Amanda67
+amandA123@

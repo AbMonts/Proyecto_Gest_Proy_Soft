@@ -30,7 +30,7 @@ namespace Proyecto_1.BackEnd
             {
                 conn.Open();
 
-                // 1️⃣ Verificar si es administrador
+                // si es admin
                 string queryAdmin = @"SELECT COUNT(*) FROM administrador 
                                       WHERE usuario=@usuario AND password_ad=SHA2(@password, 256)";
                 using (var cmdAdmin = new MySqlCommand(queryAdmin, conn))
@@ -43,7 +43,7 @@ namespace Proyecto_1.BackEnd
                         return "Admin";
                 }
 
-                // 2️⃣ Verificar si es usuario normal
+                //si es un usuario
                 string queryUser = @"SELECT COUNT(*) FROM usuario 
                                      WHERE usuario=@usuario AND password=SHA2(@password, 256)";
                 using (var cmdUser = new MySqlCommand(queryUser, conn))
