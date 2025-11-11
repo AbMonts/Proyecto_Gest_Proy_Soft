@@ -114,10 +114,7 @@
     <Compile Include="BackEnd\LoginLogin\LoginService.cs" />
     <Compile Include="BackEnd\LoginLogin\RegistroService.cs" />
     <Compile Include="BackEnd\Notify\Grupo.cs" />
-    <Compile Include="BackEnd\Notify\GrupoR.cs" />
     <Compile Include="BackEnd\Notify\Notificacion.cs" />
-    <Compile Include="BackEnd\Notify\NotificacionR.cs" />
-    <Compile Include="BackEnd\Notify\UsuarioR.cs" />
     <Compile Include="BackEnd\Notify\Usuarios.cs" />
     <Compile Include="FrontEnd\Helpers\MaterialSkinHelper.cs" />
     <Compile Include="FrontEnd\Notify\Login\Login_View.cs">

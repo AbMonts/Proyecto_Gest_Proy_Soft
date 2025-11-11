@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,8 +33,21 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Notificacion_User
                 Primary.DeepPurple200,
                 Accent.Purple200,
                 TextShade.WHITE
-            );
-            rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\NotificacionesUsuario\" + u.usuario + ".json";
+            );//ruta estatica
+
+            // Obtener la ruta base del proyecto en tiempo de ejecución
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Subir carpetas si el ejecutable está en bin/Debug o bin/Release
+            string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\NotificacionesUsuario"));
+
+            // Crear carpeta si no existe
+            Directory.CreateDirectory(projectPath);
+
+            // Construir la ruta final del JSON
+            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
+
+            //rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\NotificacionesUsuario\" + u.usuario + ".json";
         }
 
         private void btn_notificacion_Click(object sender, EventArgs e)

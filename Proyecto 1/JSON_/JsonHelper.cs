@@ -220,7 +220,7 @@ public class JsonHelper
         }
         else
         {
-            File.WriteAllText(archivoJson, "[]");
+            File.WriteAllText(archivoJson, "[]"); //marca error al intentar ir a secciones como usuario
         }
 
         return secciones;

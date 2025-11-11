@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,17 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User
                 TextShade.WHITE
             );
             menu_lbl.Text = "Aquí están tus grupos " + u.usuario;
-            rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\GruposUsuario\" + u.usuario + ".json";
+            //rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\GruposUsuario\" + u.usuario + ".json";
+            // ruta din del JSON para grupos de usuario
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\GruposUsuario"));
+
+            // Crear carpeta si no existe
+            Directory.CreateDirectory(projectPath);
+
+            // Generar el nombre del archivo basado en el usuario
+            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
+
         }
 
         private void btn_back_Click(object sender, EventArgs e)

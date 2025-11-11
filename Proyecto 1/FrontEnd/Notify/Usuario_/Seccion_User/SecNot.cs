@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,15 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User
                 TextShade.WHITE
             );
             menu_lbl.Text = "Aquí están tus secciones " + u.usuario;
-            rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\SeccionesUsuario\" + u.usuario + ".json";
+            // ruta din de la ruta JSON
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\SeccionesUsuario"));
+
+            // Crear la carpeta si no existe
+            Directory.CreateDirectory(projectPath);
+
+            // Generar el nombre del archivo basado en el usuario
+            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
         }
 
         private void SecNot_Load(object sender, EventArgs e)

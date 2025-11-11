@@ -5,7 +5,7 @@ using System.Data;
 using System;
 using Mysqlx.Crud;
 using Mysqlx.Cursor;
-using Proyecto_1.BackEnd.Notify;
+
 
 namespace Not.Backend
 {
@@ -169,7 +169,7 @@ namespace Not.Backend
             return dataTable;
         }
 
-        // Crea una nueva notificación en la base de datos
+        // Crea una nueva not en la base de datos
         public bool crear_notificacion(Notificacion n)
         {
             // Hacemos uso de transacciones y rollback para mantener la conscistencia en la base de datos
@@ -179,7 +179,7 @@ namespace Not.Backend
                 c.OpenConnection();
                 tran = c.GetConnection().BeginTransaction();
 
-                // Creamos la query que se enviará a MySQL
+                // Creamos la query que se enviara a MySQL
                 string query = @"INSERT INTO notificacion (tipo, remitente, receptor, descripcion, id_admin)
                  VALUES (@tipo, @rem, @rec, @desc, @idadmin)";
                 MySqlCommand cmd = new MySqlCommand(query, c.GetConnection());

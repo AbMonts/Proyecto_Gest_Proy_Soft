@@ -38,7 +38,7 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO
                 TextShade.WHITE
             );
             this.u = u;
-            lbl_bienvenue.Text = "Bienvenido " + u.usuario;
+            lbl_bienvenue.Text = "Bienvenido: " + u.nombre + " " + "'"  + u.usuario + "'";
         }
 
         private void MENU_USER_Load(object sender, EventArgs e)
