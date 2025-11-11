@@ -44,3 +44,9 @@ juan123
 
 Amanda67
 amandA123@
+
+
+Se no pueden crear secciones y 
+
+ya se crean grupos y aun no se actualiza o elimina(error)
+

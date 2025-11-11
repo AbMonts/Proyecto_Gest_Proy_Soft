@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -41,7 +42,11 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User
             this.opcion = opcion;
             Text = "Crea una nueva sección " + u.usuario;
 
-            rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\SeccionesUsuario\" + u.usuario + ".json";
+            //rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\SeccionesUsuario\" + u.usuario + ".json";
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\SeccionesUsuario"));
+            Directory.CreateDirectory(projectPath);
+            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
         }
 
         // actualizar
@@ -65,7 +70,12 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User
             txb_desc.Text = seccionJson.DESCRIPCIÓN;
             txb_filtro.Text = seccionJson.FILTRO;
 
-            rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\SeccionesUsuario\" + u.usuario + ".json";
+            //rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\SeccionesUsuario\" + u.usuario + ".json";
+            // Ruta dinamica
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\SeccionesUsuario"));
+            Directory.CreateDirectory(projectPath);
+            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
         }
 
         private void seccion_mod_Load(object sender, EventArgs e) 
