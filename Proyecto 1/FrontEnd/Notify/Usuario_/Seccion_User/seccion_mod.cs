@@ -40,13 +40,13 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User
             );
             this.u = u;
             this.opcion = opcion;
-            Text = "Crea una nueva sección " + u.usuario;
+            Text = "Crea una nueva sección " + u.UsuarioNombre;
 
             //rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\SeccionesUsuario\" + u.usuario + ".json";
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\SeccionesUsuario"));
             Directory.CreateDirectory(projectPath);
-            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
+            rutaArchivoJson = Path.Combine(projectPath, u.UsuarioNombre + ".json");
         }
 
         // actualizar
@@ -65,7 +65,7 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User
             this.u = u;
             this.aux = seccionJson;
             this.opcion = opcion;
-            Text = "Actualiza la sección " + u.usuario;
+            Text = "Actualiza la sección " + u.UsuarioNombre;
             txb_nombre.Text = seccionJson.NOMBRE;
             txb_desc.Text = seccionJson.DESCRIPCIÓN;
             txb_filtro.Text = seccionJson.FILTRO;
@@ -75,7 +75,7 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\SeccionesUsuario"));
             Directory.CreateDirectory(projectPath);
-            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
+            rutaArchivoJson = Path.Combine(projectPath, u.UsuarioNombre + ".json");
         }
 
         private void seccion_mod_Load(object sender, EventArgs e) 

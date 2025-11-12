@@ -7,6 +7,7 @@ using Proyecto_1.FrontEnd.Notify.USUARIOS;
 using Proyecto_1.FrontEnd.Notify.GRUPOS;
 using MaterialSkin;
 using Proyecto_1.FrontEnd.Login;
+using Not.Backend.Not.Backend;
 
 namespace Proyecto_1.FrontEnd.Notify.MainMenu
 {
@@ -51,8 +52,8 @@ namespace Proyecto_1.FrontEnd.Notify.MainMenu
         {
             try
             {
-                if (opcion == 1) dgv_main.DataSource = n.mostrar_not();
-                else if (opcion == 2) dgv_main.DataSource = u.mostrar_usuarios();
+                if (opcion == 1) dgv_main.DataSource = n.MostrarNotificaciones();
+                else if (opcion == 2) dgv_main.DataSource = u.MostrarUsuarios();
                 else dgv_main.DataSource = g.mostrar_grupos();
             }
             catch
@@ -72,11 +73,11 @@ namespace Proyecto_1.FrontEnd.Notify.MainMenu
                     {
                         DataGridViewRow selectedRow = dgv_main.Rows[e.RowIndex];
 
-                        this.n.id = Convert.ToInt32(selectedRow.Cells[0].Value);
-                        this.n.tipo = selectedRow.Cells[1].Value.ToString();
-                        this.n.remitente = selectedRow.Cells[2].Value.ToString();
-                        this.n.receptor = selectedRow.Cells[3].Value.ToString();
-                        this.n.descripcion = selectedRow.Cells[4].Value.ToString();
+                        this.n.Id = Convert.ToInt32(selectedRow.Cells[0].Value);
+                        this.n.Tipo = selectedRow.Cells[1].Value.ToString();
+                        this.n.Remitente = selectedRow.Cells[2].Value.ToString();
+                        this.n.Receptor = selectedRow.Cells[3].Value.ToString();
+                        this.n.Descripcion = selectedRow.Cells[4].Value.ToString();
 
                         btn_delete.Enabled = true;
                         btn_update.Enabled = true;
@@ -101,11 +102,11 @@ namespace Proyecto_1.FrontEnd.Notify.MainMenu
                     {
                         DataGridViewRow selectedRow = dgv_main.Rows[e.RowIndex];
 
-                        this.u.id = Convert.ToInt32(selectedRow.Cells[0].Value);
-                        this.u.usuario = selectedRow.Cells[1].Value.ToString();
-                        this.u.password = selectedRow.Cells[2].Value.ToString();
-                        this.u.nombre = selectedRow.Cells[3].Value.ToString();
-                        this.u.correo = selectedRow.Cells[4].Value.ToString();
+                        this.u.Id = Convert.ToInt32(selectedRow.Cells[0].Value);
+                        this.u.UsuarioNombre = selectedRow.Cells[1].Value.ToString();
+                        this.u.Password = selectedRow.Cells[2].Value.ToString();
+                        this.u.Nombre = selectedRow.Cells[3].Value.ToString();
+                        this.u.Correo = selectedRow.Cells[4].Value.ToString();
                         
                         btn_delete.Enabled = true;
                         btn_update.Enabled = true;
@@ -201,13 +202,13 @@ namespace Proyecto_1.FrontEnd.Notify.MainMenu
             // not, usuario, grupo
             if (opcion == 1)
             {
-                if (n.eliminar_notificacion(n)) MessageBox.Show("Elemento borrado exitosamente.");
+                if (n.EliminarNotificacion(n.Id)) MessageBox.Show("Elemento borrado exitosamente.");
                 else MessageBox.Show("No se ha podido eliminar el elemento.");
                 menu_Load(null, null);
             }
             else if (opcion == 2)
             {
-                if (u.eliminar_usuario(u)) MessageBox.Show("Elemento borrado exitosamente.");
+                if (u.EliminarUsuario(u.Id)) MessageBox.Show("Elemento borrado exitosamente.");
                 else MessageBox.Show("No se ha podido eliminar el elemento.");
                 menu_Load(null, null);
 

@@ -202,7 +202,7 @@ namespace Proyecto_1.FrontEnd.Registro
             if(validar() == "Válido")
             {
                 Usuario usuario = new Usuario(txb_usuario.Text, txb_pass.Text, txb_nombre.Text, txb_correo.Text);
-                if (usuario.crear_usuario(usuario))/// 
+                if (usuario.CrearUsuario(usuario))/// 
                 {
                     MessageBox.Show("USUARIO creado exitosamente");
                     Login_View lv = new Login_View();

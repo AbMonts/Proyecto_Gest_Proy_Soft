@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using Not.Backend;
+using Not.Backend.Not.Backend;
 using Proyecto_1.BackEnd;
 
 namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Notificacion_User
@@ -45,7 +46,7 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Notificacion_User
             Directory.CreateDirectory(projectPath);
 
             // Construir la ruta final del JSON
-            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
+            rutaArchivoJson = Path.Combine(projectPath, u.UsuarioNombre + ".json");
 
             //rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\NotificacionesUsuario\" + u.usuario + ".json";
         }
@@ -69,12 +70,12 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Notificacion_User
             {
                 if (op == 1)
                 {
-                    lbl_bienvenue.Text = "Aquí están tus notificaciones generales " + u.usuario;
+                    lbl_bienvenue.Text = "Aquí están tus notificaciones generales " + u.UsuarioNombre;
 
                     List<NotificacionJson> notificacionesJsonExistentes = JsonHelper.CargarNotificacionesJson(rutaArchivoJson);
 
-                    DataTable notificacionesDesdeBD = n.mostrar_not_usuario(u);
-                    List<NotificacionJson> notificacionesDesdeBDConvertidas = n.ConvertirDataTableALista(notificacionesDesdeBD, u);
+                    DataTable notificacionesDesdeBD = n.MostrarNotificacionesUsuario(u);
+                    List<NotificacionJson> notificacionesDesdeBDConvertidas = n.ConvertirDataTableALista(notificacionesDesdeBD);
 
                     foreach (var notiNueva in notificacionesDesdeBDConvertidas)
                     {
@@ -98,13 +99,13 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Notificacion_User
 
                     if (op == 2)
                     {
-                        lbl_bienvenue.Text = "Aquí están tus notificaciones visibles " + u.usuario;
+                        lbl_bienvenue.Text = "Aquí están tus notificaciones visibles " + u.UsuarioNombre;
                         var notificacionesFiltradas = listaNotificaciones.Where(n => n.ESTADO == true).OrderByDescending(n => n.FECHA).ToList();
                         bindingList = new BindingList<NotificacionJson>(notificacionesFiltradas);
                     }
                     else
                     {
-                        lbl_bienvenue.Text = "Aquí están tus notificaciones ocultas " + u.usuario;
+                        lbl_bienvenue.Text = "Aquí están tus notificaciones ocultas " + u.UsuarioNombre;
                         var notificacionesFiltradas = listaNotificaciones.Where(n => n.ESTADO == false).OrderByDescending(n => n.FECHA).ToList();
                         bindingList = new BindingList<NotificacionJson>(notificacionesFiltradas);
                     }

@@ -31,13 +31,13 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User
             );
             this.u = u;
             this.opcion = opcion;
-            Text = "Quieres unirte a un nuevo grupo " + u.usuario + "!";
+            Text = "Quieres unirte a un nuevo grupo " + u.UsuarioNombre + "!";
 
             //rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\GruposUsuario\" + u.usuario + ".json";
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\GruposUsuario"));
             Directory.CreateDirectory(projectPath);
-            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
+            rutaArchivoJson = Path.Combine(projectPath, u.UsuarioNombre + ".json");
         }
 
         // actualizar
@@ -56,7 +56,7 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User
             this.u = u;
             this.aux = grupoJson;
             this.opcion = opcion;
-            Text = "Actualiza el grupo " + u.usuario;
+            Text = "Actualiza el grupo " + u.UsuarioNombre;
             txb_nombre.Text = grupoJson.NOMBRE;
             txb_desc.Text = grupoJson.DESCRIPCIÓN;
 
@@ -66,7 +66,7 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\GruposUsuario"));
             Directory.CreateDirectory(projectPath);
-            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
+            rutaArchivoJson = Path.Combine(projectPath, u.UsuarioNombre + ".json");
         }
 
         private void btn_back_Click(object sender, EventArgs e)

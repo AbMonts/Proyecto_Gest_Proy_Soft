@@ -43,11 +43,11 @@ namespace Proyecto_1.FrontEnd.Notify.USUARIOS
                 TextShade.WHITE
             );
 
-            txb_nombre.Text = u.nombre;
-            txb_usuario.Text = u.usuario;
-            txb_correo.Text = u.correo;
+            txb_nombre.Text = u.Nombre;
+            txb_usuario.Text = u.UsuarioNombre;
+            txb_correo.Text = u.Correo;
             modo = true;
-            llave = u.id;
+            llave = u.Id;
         }
 
         private void usuarios_view_Load(object sender, EventArgs e)
@@ -71,13 +71,13 @@ namespace Proyecto_1.FrontEnd.Notify.USUARIOS
                 if (!modo)
                 {
                     // Intentamos realizar la insersion
-                    if (x.crear_usuario(x)) MessageBox.Show("Insersión Exitosa!");
+                    if (x.CrearUsuario(x)) MessageBox.Show("Insersión Exitosa!");
                     else MessageBox.Show("Ha ocurrido un error. No se ha realizado la insersión.");
                 }
                 else
                 {
                     // Intentamos realizar la actualización
-                    if (x.actualizar_usuario(x)) MessageBox.Show("Actualización Exitosa!");
+                    if (x.ActualizarUsuario(x)) MessageBox.Show("Actualización Exitosa!");
                     else MessageBox.Show("Ha ocurrido un error. No se ha realizado la actualización.");
                 }
 

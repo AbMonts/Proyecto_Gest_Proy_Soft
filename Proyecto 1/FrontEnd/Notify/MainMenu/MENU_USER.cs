@@ -17,11 +17,13 @@ using Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User;
 using Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User;
 using MaterialSkin;
 using Proyecto_1.FrontEnd.Login;
+using Not.Backend.Not.Backend;
 
 namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO
 {
     public partial class MENU_USER : MaterialForm
     {
+        
         Notificacion n = new Notificacion();
         Usuario u = new Usuario();
 
@@ -38,14 +40,14 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO
                 TextShade.WHITE
             );
             this.u = u;
-            lbl_bienvenue.Text = "Bienvenido: " + u.nombre + " " + "'"  + u.usuario + "'";
+            lbl_bienvenue.Text = "Bienvenido: " + u.Nombre + " " + "'"  + u.UsuarioNombre + "'";
         }
 
         private void MENU_USER_Load(object sender, EventArgs e)
         {
             try
             {
-                dgv_not_impor.DataSource = n.mostrar_not_importantes();
+                dgv_not_impor.DataSource = n.MostrarNotificacionesImportantes();
             }
             catch
             {

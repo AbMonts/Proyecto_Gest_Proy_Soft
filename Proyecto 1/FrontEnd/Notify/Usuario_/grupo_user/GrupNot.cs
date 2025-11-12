@@ -34,7 +34,7 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User
                 Accent.Purple200,
                 TextShade.WHITE
             );
-            menu_lbl.Text = "Aquí están tus grupos " + u.usuario;
+            menu_lbl.Text = "Aquí están tus grupos " + u.UsuarioNombre;
             //rutaArchivoJson = @"C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\JSON_\GruposUsuario\" + u.usuario + ".json";
             // ruta din del JSON para grupos de usuario
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
@@ -44,7 +44,7 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User
             Directory.CreateDirectory(projectPath);
 
             // Generar el nombre del archivo basado en el usuario
-            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
+            rutaArchivoJson = Path.Combine(projectPath, u.UsuarioNombre + ".json");
 
         }
 

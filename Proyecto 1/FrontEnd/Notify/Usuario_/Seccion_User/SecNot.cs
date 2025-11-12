@@ -33,7 +33,7 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User
                 Accent.Purple200,
                 TextShade.WHITE
             );
-            menu_lbl.Text = "Aquí están tus secciones " + u.usuario;
+            menu_lbl.Text = "Aquí están tus secciones " + u.UsuarioNombre;
             // ruta din de la ruta JSON
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\..\JSON_\SeccionesUsuario"));
@@ -42,7 +42,7 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User
             Directory.CreateDirectory(projectPath);
 
             // Generar el nombre del archivo basado en el usuario
-            rutaArchivoJson = Path.Combine(projectPath, u.usuario + ".json");
+            rutaArchivoJson = Path.Combine(projectPath, u.UsuarioNombre + ".json");
         }
 
         private void SecNot_Load(object sender, EventArgs e)

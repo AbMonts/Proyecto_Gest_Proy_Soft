@@ -218,24 +218,6 @@ C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notif
 C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.GenerateResource.cache
 C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.CoreCompileInputs.cache
 C:\Users\nopes\OneDrive\Escritorio\notify v4w diseño listo\notifaicuatrow\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.Up2Date
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.AssemblyReference.cache
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Login.Login_View.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Registro.Registro_View.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.GRUPOS.grupos_view.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MainMenu.Menu_Admin.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MENU_USUARIO.MENU_USER.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User.GrupNot.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User.grupo_mod.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User.grupo_notificacion.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Notificacion_User.UserNot.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User.seccion_mod.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User.seccion_notificacion.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User.SecNot.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.NOTIFICACIONES.notificaciones_view.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.USUARIOS.usuarios_view.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.Properties.Resources.resources
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.GenerateResource.cache
-C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.CoreCompileInputs.cache
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\bin\Debug\Proyecto 1.exe.config
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\bin\Debug\Proyecto 1.exe
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\bin\Debug\Proyecto 1.pdb
@@ -274,6 +256,24 @@ C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyect
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.AssemblyReference.cache
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Login.Login_View.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Registro.Registro_View.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.GRUPOS.grupos_view.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MainMenu.Menu_Admin.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MENU_USUARIO.MENU_USER.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User.GrupNot.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User.grupo_mod.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User.grupo_notificacion.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Notificacion_User.UserNot.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User.seccion_mod.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User.seccion_notificacion.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User.SecNot.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.NOTIFICACIONES.notificaciones_view.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.USUARIOS.usuarios_view.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto_1.Properties.Resources.resources
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.GenerateResource.cache
+C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.CoreCompileInputs.cache
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.Up2Date
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.exe
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.pdb

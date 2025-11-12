@@ -1,6 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using Not.Backend;
+using Not.Backend.Not.Backend;
 using Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,9 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User
     public partial class grupo_notificacion : MaterialForm
     {
         Usuario u;
+        
         GrupoJson grupoJson;
+
         Notificacion n = new Notificacion();
         public grupo_notificacion(Usuario u, GrupoJson grupoJson)
         {
@@ -32,14 +35,14 @@ namespace Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User
                 TextShade.WHITE
             );
             Text = grupoJson.NOMBRE;
-            lbl_bienvenue.Text = "Hola " + u.usuario;
+            lbl_bienvenue.Text = "Hola " + u.UsuarioNombre;
             this.u = u;
             this.grupoJson = grupoJson;
         }
 
         private void grupo_notificacion_Load(object sender, EventArgs e)
         {
-            dgv_not.DataSource = n.mostrar_not_grupo(grupoJson);
+            dgv_not.DataSource = n.MostrarNotificacionesGrupo(grupoJson);
         }
 
         private void btn_back_Click_1(object sender, EventArgs e)

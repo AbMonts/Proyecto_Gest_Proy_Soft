@@ -2,6 +2,7 @@
 using MaterialSkin.Controls;
 using Mysqlx.Cursor;
 using Not.Backend;
+using Not.Backend.Not.Backend;
 using Org.BouncyCastle.Asn1.X500;
 using Org.BouncyCastle.Crypto;
 using Proyecto_1.BackEnd;
@@ -45,12 +46,12 @@ namespace Proyecto_1.FrontEnd.Notify.NOTIFICACIONES
                 Accent.Purple200,
                 TextShade.WHITE
             );
-            txb_rem.Text = n.remitente;
-            txb_rec.Text = n.receptor;
-            txb_desc.Text = n.descripcion;
-            txb_pri.Text = n.tipo;
+            txb_rem.Text = n.Remitente;
+            txb_rec.Text = n.Receptor;
+            txb_desc.Text = n.Descripcion;
+            txb_pri.Text = n.Tipo;
             modo = true;
-            llave = n.id;
+            llave = n.Id;
         }
 
         private void notificaciones_view_Load(object sender, EventArgs e)
@@ -75,13 +76,13 @@ namespace Proyecto_1.FrontEnd.Notify.NOTIFICACIONES
                 if (!modo)
                 {
                     // Intentamos realizar la insersion
-                    if (x.crear_notificacion(x)) MessageBox.Show("Insersión Exitosa!");
+                    if (x.CrearNotificacion(x)) MessageBox.Show("Insersión Exitosa!");
                     else MessageBox.Show("Ha ocurrido un error. No se ha realizado la insersión.");
                 }
                 else
                 {
                     // Intentamos realizar la actualización
-                    if (x.actualizar_notificacion(x)) MessageBox.Show("Actualización Exitosa!");
+                    if (x.ActualizarNotificacion(x)) MessageBox.Show("Actualización Exitosa!");
                     else MessageBox.Show("Ha ocurrido un error. No se ha realizado la actualización.");
                 }
 
