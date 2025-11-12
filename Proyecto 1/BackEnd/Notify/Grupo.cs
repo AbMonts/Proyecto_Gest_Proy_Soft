@@ -12,18 +12,18 @@ namespace Not.Backend
 {
     public class Grupo
     {
-
         public int id;
         public int numero_usuarios;
         public int id_admin;
         public string nombre;
         public string descripcion;
         Conexion c = new Conexion();
+
+        // ------------------constructores ------------------
         public Grupo()
         {
 
         }
-
         public Grupo(int id, string nombre, string descripcion)
         {
             this.id = id;
@@ -31,11 +31,11 @@ namespace Not.Backend
             this.descripcion = descripcion;
         }
 
+        // ---------------- metodos de grupo ------------------------
         public string ver_usuarios()
         {
             return null;
         }
-
         public DataTable mostrar_grupos()
         {
             DataTable dataTable = new DataTable();
@@ -64,7 +64,6 @@ namespace Not.Backend
 
             return dataTable;
         }
-
         public bool crear_grupo(Grupo g)
         {
             MySqlTransaction tran = null;
@@ -105,7 +104,6 @@ namespace Not.Backend
                 c.CloseConnection();
             }
         }
-
         public bool eliminar_grupo(Grupo g)
         {
             MySqlTransaction tran = null;
@@ -140,7 +138,6 @@ namespace Not.Backend
 
             return res;
         }
-
         public bool actualizar_grupo(Grupo g)
         {
             MySqlTransaction tran = null;
@@ -176,7 +173,6 @@ namespace Not.Backend
                 {
                     tran.Rollback();
                 }
-                //MessageBox.Show(ex.Message);
                 res = false;
             }
             finally

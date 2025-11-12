@@ -45,8 +45,5 @@ juan123
 Amanda67
 amandA123@
 
-
-Se no pueden crear secciones y 
-
-ya se crean grupos y aun no se actualiza o elimina(error)
+ya se crean grupos y secciones, sin embargo aun no es posible actualizar o eliminar(possible error en metodos)
 
