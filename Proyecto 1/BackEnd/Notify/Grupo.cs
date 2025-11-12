@@ -12,175 +12,131 @@ namespace Not.Backend
 {
     public class Grupo
     {
-        public int id;
-        public int numero_usuarios;
-        public int id_admin;
-        public string nombre;
-        public string descripcion;
-        Conexion c = new Conexion();
+        public int Id { get; set; }
+        public int NumeroUsuarios { get; set; }
+        public int IdAdmin { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
 
-        // ------------------constructores ------------------
-        public Grupo()
-        {
+        private readonly Conexion _conexion = new Conexion();
 
-        }
+        // ------------------ Constructores ------------------
+        public Grupo() { }
+
         public Grupo(int id, string nombre, string descripcion)
         {
-            this.id = id;
-            this.nombre = nombre;
-            this.descripcion = descripcion;
+            Id = id;
+            Nombre = nombre;
+            Descripcion = descripcion;
         }
 
-        // ---------------- metodos de grupo ------------------------
-        public string ver_usuarios()
+        // ---------------- Métodos de grupo ------------------------
+
+        public string VerUsuarios()
         {
+            // Puedes implementar lógica real aquí más adelante
             return null;
         }
-        public DataTable mostrar_grupos()
+
+        public DataTable MostrarGrupos()
         {
             DataTable dataTable = new DataTable();
 
+            const string query = "SELECT * FROM grupo";
+
             try
             {
-                c.OpenConnection();
-
-                string query = "SELECT * FROM grupo";
-                using (MySqlCommand command = new MySqlCommand(query, c.GetConnection()))
+                _conexion.OpenConnection();
+                using (MySqlCommand command = new MySqlCommand(query, _conexion.GetConnection()))
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                 {
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
-                    {
-                        adapter.Fill(dataTable);
-                    }
+                    adapter.Fill(dataTable);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine($"Error al mostrar grupos: {ex.Message}");
             }
             finally
             {
-                c.CloseConnection();
+                _conexion.CloseConnection();
             }
 
             return dataTable;
         }
-        public bool crear_grupo(Grupo g)
+
+        public bool CrearGrupo(Grupo grupo)
+        {
+            const string query = @"INSERT INTO grupo (nombre, descripcion, numero_usuarios, id_admin)
+                                   VALUES (@nombre, @descripcion, @num_usuarios, @id_admin)";
+
+            return EjecutarTransaccion(query, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@nombre", grupo.Nombre);
+                cmd.Parameters.AddWithValue("@descripcion", grupo.Descripcion);
+                cmd.Parameters.AddWithValue("@num_usuarios", grupo.NumeroUsuarios);
+                cmd.Parameters.AddWithValue("@id_admin", grupo.IdAdmin);
+            });
+        }
+
+        public bool EliminarGrupo(Grupo grupo)
+        {
+            const string query = "DELETE FROM grupo WHERE id = @id";
+
+            return EjecutarTransaccion(query, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@id", grupo.Id);
+            });
+        }
+
+        public bool ActualizarGrupo(Grupo grupo)
+        {
+            const string query = @"UPDATE grupo
+                                   SET nombre = @nombre,
+                                       descripcion = @descripcion,
+                                       numero_usuarios = @num_usuarios,
+                                       id_admin = @id_admin
+                                   WHERE id = @id";
+
+            return EjecutarTransaccion(query, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@nombre", grupo.Nombre);
+                cmd.Parameters.AddWithValue("@descripcion", grupo.Descripcion);
+                cmd.Parameters.AddWithValue("@num_usuarios", grupo.NumeroUsuarios);
+                cmd.Parameters.AddWithValue("@id_admin", grupo.IdAdmin);
+                cmd.Parameters.AddWithValue("@id", grupo.Id);
+            });
+        }
+
+        // ---------------- Método privado reutilizable ------------------------
+        private bool EjecutarTransaccion(string query, Action<MySqlCommand> configurarComando)
         {
             MySqlTransaction tran = null;
+
             try
             {
-                c.OpenConnection();
+                _conexion.OpenConnection();
+                var conn = _conexion.GetConnection();
+                tran = conn.BeginTransaction();
 
-                tran = c.GetConnection().BeginTransaction();
-
-                MySqlConnection connection = c.GetConnection();
-                string query = @"INSERT INTO grupo (nombre, descripcion, numero_usuarios, id_admin)
-                 VALUES (@nombre, @descripcion, @num_usuarios, @id_admin)";
-
-                MySqlCommand cmd = new MySqlCommand(query, c.GetConnection());
-
-                cmd.Parameters.AddWithValue("@nombre", g.nombre);
-                cmd.Parameters.AddWithValue("@descripcion", g.descripcion);
-                cmd.Parameters.AddWithValue("@num_usuarios", g.numero_usuarios);
-                cmd.Parameters.AddWithValue("@id_admin", g.id_admin);
-
-
-                cmd.ExecuteNonQuery();
-                tran.Commit();
-
-                return true;
+                using (MySqlCommand cmd = new MySqlCommand(query, conn, tran))
+                {
+                    configurarComando(cmd);
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+                    tran.Commit();
+                    return filasAfectadas > 0;
+                }
             }
             catch (Exception ex)
             {
-                if (tran != null)
-                {
-                    tran.Rollback();
-                }
-                //MessageBox.Show(ex.Message);
+                tran?.Rollback();
+                Console.WriteLine($"Error en transacción: {ex.Message}");
                 return false;
             }
             finally
             {
-                c.CloseConnection();
+                _conexion.CloseConnection();
             }
-        }
-        public bool eliminar_grupo(Grupo g)
-        {
-            MySqlTransaction tran = null;
-            bool res = true;
-            string query = "DELETE FROM grupo WHERE id = @id";
-
-            try
-            {
-                c.OpenConnection();
-                tran = c.GetConnection().BeginTransaction();
-                using (MySqlCommand cmd = new MySqlCommand(query, c.GetConnection()))
-                {
-                    cmd.Parameters.AddWithValue("@id", g.id);
-                    int filas = cmd.ExecuteNonQuery();
-                    res = filas > 0;
-                }
-                tran.Commit();
-            }
-            catch (Exception ex)
-            {
-                if (tran != null)
-                {
-                    tran.Rollback();
-                }
-                //MessageBox.Show(ex.Message);
-                res = false;
-            }
-            finally
-            {
-                c.CloseConnection();
-            }
-
-            return res;
-        }
-        public bool actualizar_grupo(Grupo g)
-        {
-            MySqlTransaction tran = null;
-            bool res = true;
-            string query = @"UPDATE grupo
-                 SET nombre = @nombre,
-                     descripcion = @descripcion,
-                     numero_usuarios = @num_usuarios,
-                     id_admin = @id_admin
-                 WHERE id = @id";
-
-            try
-            {
-                c.OpenConnection();
-                tran = c.GetConnection().BeginTransaction();
-                using (MySqlCommand cmd = new MySqlCommand(query, c.GetConnection()))
-                {
-                    cmd.Parameters.AddWithValue("@nombre", g.nombre);
-                    cmd.Parameters.AddWithValue("@descripcion", g.descripcion);
-                    cmd.Parameters.AddWithValue("@num_usuarios", g.numero_usuarios);
-                    cmd.Parameters.AddWithValue("@id_admin", g.id_admin);
-                    cmd.Parameters.AddWithValue("@id", g.id);
-
-
-                    int filas = cmd.ExecuteNonQuery();
-                    res = filas > 0;
-                }
-                tran.Commit();
-            }
-            catch (Exception ex)
-            {
-                if (tran != null)
-                {
-                    tran.Rollback();
-                }
-                res = false;
-            }
-            finally
-            {
-                c.CloseConnection();
-            }
-
-            return res;
         }
     }
 }

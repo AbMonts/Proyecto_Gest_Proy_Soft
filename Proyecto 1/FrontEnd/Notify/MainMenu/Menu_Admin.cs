@@ -54,7 +54,7 @@ namespace Proyecto_1.FrontEnd.Notify.MainMenu
             {
                 if (opcion == 1) dgv_main.DataSource = n.MostrarNotificaciones();
                 else if (opcion == 2) dgv_main.DataSource = u.MostrarUsuarios();
-                else dgv_main.DataSource = g.mostrar_grupos();
+                else dgv_main.DataSource = g.MostrarGrupos();
             }
             catch
             {
@@ -131,9 +131,9 @@ namespace Proyecto_1.FrontEnd.Notify.MainMenu
                     {
                         DataGridViewRow selectedRow = dgv_main.Rows[e.RowIndex];
 
-                        this.g.id = Convert.ToInt32(selectedRow.Cells[0].Value);
-                        this.g.nombre = selectedRow.Cells[1].Value.ToString();
-                        this.g.descripcion = selectedRow.Cells[2].Value.ToString();
+                        this.g.Id = Convert.ToInt32(selectedRow.Cells[0].Value);
+                        this.g.Nombre = selectedRow.Cells[1].Value.ToString();
+                        this.g.Descripcion = selectedRow.Cells[2].Value.ToString();
 
                         btn_delete.Enabled = true;
                         btn_update.Enabled = true;
@@ -215,7 +215,7 @@ namespace Proyecto_1.FrontEnd.Notify.MainMenu
             }
             else
             {
-                if (g.eliminar_grupo(g)) MessageBox.Show("Elemento borrado exitosamente.");
+                if (g.EliminarGrupo(g)) MessageBox.Show("Elemento borrado exitosamente.");
                 else MessageBox.Show("No se ha podido eliminar el elemento.");
                 menu_Load(null, null);
             }

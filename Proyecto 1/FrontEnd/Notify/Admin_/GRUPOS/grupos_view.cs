@@ -41,10 +41,10 @@ namespace Proyecto_1.FrontEnd.Notify.GRUPOS
                 Accent.Purple200,
                 TextShade.WHITE
             );
-            txb_nombre.Text = g.nombre;
-            txb_desc.Text = g.descripcion;
+            txb_nombre.Text = g.Nombre;
+            txb_desc.Text = g.Descripcion;
             modo = true;
-            llave = g.id;
+            llave = g.Id;
         }
 
         private void grupos_view_Load(object sender, EventArgs e)
@@ -69,13 +69,13 @@ namespace Proyecto_1.FrontEnd.Notify.GRUPOS
                 if (!modo)
                 {
                     // Intentamos realizar la insersion
-                    if (x.crear_grupo(x)) MessageBox.Show("Insersión Exitosa!");
+                    if (x.CrearGrupo(x)) MessageBox.Show("Insersión Exitosa!");
                     else MessageBox.Show("Ha ocurrido un error. No se ha realizado la insersión.");
                 }
                 else
                 {
                     // Intentamos realizar la actualización
-                    if (x.actualizar_grupo(x)) MessageBox.Show("Actualización Exitosa!");
+                    if (x.ActualizarGrupo(x)) MessageBox.Show("Actualización Exitosa!");
                     else MessageBox.Show("Ha ocurrido un error. No se ha realizado la actualización.");
                 }
 

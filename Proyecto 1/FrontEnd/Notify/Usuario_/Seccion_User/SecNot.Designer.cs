@@ -192,9 +192,9 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User
             this.dgv_sec.RowHeadersVisible = false;
             this.dgv_sec.RowHeadersWidth = 51;
             this.dgv_sec.RowTemplate.Height = 24;
+            this.dgv_sec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_sec.Size = new System.Drawing.Size(614, 142);
             this.dgv_sec.TabIndex = 6;
-            this.dgv_sec.CellClick += dgv_sec_CellClick;
             // 
             // menu_panel
             // 

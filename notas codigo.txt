@@ -1,3 +1,69 @@
+La Nueva base de datos del Proyecto: 
+
+CREATE DATABASE IF NOT EXISTS ing;
+USE ing;
+
+CREATE TABLE administrador (
+    id_admin INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    usuario VARCHAR(50) UNIQUE NOT NULL,
+    password_ad VARCHAR(255) NOT NULL,
+    correo VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE areas (
+    id_area INT PRIMARY KEY AUTO_INCREMENT,
+    area_nombre VARCHAR(100) NOT NULL,
+    area_ubicacion VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE inventario (
+    id_inventario INT PRIMARY KEY AUTO_INCREMENT,
+    inventario_nombre VARCHAR(100) NOT NULL,
+    inventario_descripcion TEXT,
+    inventario_serie VARCHAR(50),
+    inventario_color VARCHAR(30),
+    inventario_fecha DATE,
+    inventario_tipo VARCHAR(50),
+    inventario_observaciones TEXT,
+    id_area INT,
+    FOREIGN KEY (id_area) REFERENCES areas(id_area) ON DELETE SET NULL
+);
+
+CREATE TABLE grupo (
+    id_grupo INT PRIMARY KEY AUTO_INCREMENT,
+    numero_usuarios INT DEFAULT 0,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    id_admin INT,
+    FOREIGN KEY (id_admin) REFERENCES administrador(id_admin) ON DELETE CASCADE
+);
+
+CREATE TABLE usuario (
+    id_usario INT PRIMARY KEY AUTO_INCREMENT,
+    usuario VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) NOT NULL,
+   id_admin INT,
+    FOREIGN KEY (id_admin) REFERENCES administrador(id_admin) ON DELETE CASCADE
+);
+
+CREATE TABLE notificacion (
+    id_notificacion INT PRIMARY KEY AUTO_INCREMENT,
+    tipo VARCHAR(50) NOT NULL,
+    remitente VARCHAR(100) NOT NULL,
+    receptor VARCHAR(100) NOT NULL,
+    descripcion TEXT NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    id_admin INT,
+    FOREIGN KEY (id_admin) REFERENCES administrador(id_admin) ON DELETE CASCADE
+);
+
+------------------------------------------------
+
+
+
 En cuanto a la relacion con la base de datos y los archivos que se comunicaran con la base de datos:
 se esta usando en la clase usuarios:
 	en notificacion.cs
@@ -30,17 +96,11 @@ se esta usando en la clase notificacion
 	grupo_notificacion
 	UserNot
 	
- ------------------------------------------------------------
-Haciendo: Factorizando en raiz de usuario.cs y donde se usan sus metodos.
-Hacer despues: refactorizar notificacion y grupo (extra).
+ ---------------12 - 11 - 25 ---------------------------------------------
+Haciendo: reactorizacion de grupo (como extra).
 Cambios: 
 Ya registra usuario. Inicia y registra bien usuarios.
 Ya se crean grupos y secciones, sin embargo aun no es posible actualizar o eliminar(possible error en metodos, se verá despues)
 
- --------------usuarios de prueba----------------------
-usuarioJuan
-juan123
 
-Amanda67
-amandA123@
 
