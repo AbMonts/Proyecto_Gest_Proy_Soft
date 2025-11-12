@@ -14,9 +14,6 @@ se esta usando en la clase usuarios:
 	seccion_notificacion
 	secNot
 	
-Notas:
-hacer la tabla (usuario)
-al crear un usuario se usa sha, a la hora de insertar.
 
 -----------------------------------------
 se esta usando en la clase grupo:
@@ -33,17 +30,17 @@ se esta usando en la clase notificacion
 	grupo_notificacion
 	UserNot
 	
-
-Haciendo: Factorizando usuarios
-Hacer despues: refactorizar notificacion y grupo
+ ------------------------------------------------------------
+Haciendo: Factorizando en raiz de usuario.cs y donde se usan sus metodos.
+Hacer despues: refactorizar notificacion y grupo (extra).
 Cambios: 
 Ya registra usuario. Inicia y registra bien usuarios.
+Ya se crean grupos y secciones, sin embargo aun no es posible actualizar o eliminar(possible error en metodos, se verá despues)
 
+ --------------usuarios de prueba----------------------
 usuarioJuan
 juan123
 
 Amanda67
 amandA123@
-
-ya se crean grupos y secciones, sin embargo aun no es posible actualizar o eliminar(possible error en metodos)
 
