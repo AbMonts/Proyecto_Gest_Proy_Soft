@@ -277,3 +277,62 @@ C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyect
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.csproj.Up2Date
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.exe
 C:\Users\Monts\Downloads\Gest Ing Sw\ProyectoV2\Modificar\notifaicuatrow\Proyecto 1\obj\Debug\Proyecto 1.pdb
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Proyecto 1.exe.config
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Proyecto 1.exe
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Proyecto 1.pdb
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Google.Protobuf.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\K4os.Compression.LZ4.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\K4os.Hash.xxHash.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\MaterialSkin.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\MySql.Data.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Newtonsoft.Json.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Buffers.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.IO.Pipelines.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Memory.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Numerics.Vectors.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\ZstdSharp.dll
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Google.Protobuf.pdb
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Google.Protobuf.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\K4os.Compression.LZ4.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\K4os.Hash.xxHash.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\MySql.Data.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\Newtonsoft.Json.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Buffers.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.IO.Pipelines.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Memory.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Numerics.Vectors.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto 1.csproj.AssemblyReference.cache
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Login.Login_View.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Registro.Registro_View.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.GRUPOS.grupos_view.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MainMenu.Menu_Admin.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MENU_USUARIO.MENU_USER.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User.GrupNot.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User.grupo_mod.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Grupo_User.grupo_notificacion.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Notificacion_User.UserNot.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User.seccion_mod.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.Usuario_.Seccion_User.seccion_notificacion.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User.SecNot.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.NOTIFICACIONES.notificaciones_view.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.FrontEnd.Notify.USUARIOS.usuarios_view.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto_1.Properties.Resources.resources
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto 1.csproj.GenerateResource.cache
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto 1.csproj.CoreCompileInputs.cache
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto 1.csproj.Up2Date
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto 1.exe
+D:\Semestre 10\Gestion de proyectos\Proyecto_Gest_Proy_Soft\Proyecto 1\obj\Debug\Proyecto 1.pdb

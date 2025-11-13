@@ -8,6 +8,7 @@ using Proyecto_1.FrontEnd.Registro;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,10 @@ namespace Proyecto_1.FrontEnd.Login
                 Accent.Purple200,          // Color de acento
                 TextShade.WHITE            // Texto (blanco para buen contraste)
             );
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\FrontEnd\images\icons8-microsoft-authenticator-250.png"));
+            pictureBox1.ImageLocation = projectPath;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -86,7 +91,7 @@ namespace Proyecto_1.FrontEnd.Login
             // 
             this.txtUsuario.Location = new System.Drawing.Point(255, 239);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(247, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(247, 20);
             this.txtUsuario.TabIndex = 1;
             // 
             // txtPassword
@@ -94,7 +99,7 @@ namespace Proyecto_1.FrontEnd.Login
             this.txtPassword.Location = new System.Drawing.Point(255, 287);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(247, 22);
+            this.txtPassword.Size = new System.Drawing.Size(247, 20);
             this.txtPassword.TabIndex = 2;
             // 
             // label1
@@ -102,7 +107,7 @@ namespace Proyecto_1.FrontEnd.Login
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(252, 223);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -112,7 +117,7 @@ namespace Proyecto_1.FrontEnd.Login
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(252, 271);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
             // 
@@ -124,6 +129,7 @@ namespace Proyecto_1.FrontEnd.Login
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_registro
             // 
@@ -206,6 +212,14 @@ namespace Proyecto_1.FrontEnd.Login
         }
 
         private void Login_View_Load(object sender, EventArgs e)
+        {
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\FrontEnd\images\icons8-microsoft-authenticator-250.png"));
+            pictureBox1.ImageLocation = projectPath;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

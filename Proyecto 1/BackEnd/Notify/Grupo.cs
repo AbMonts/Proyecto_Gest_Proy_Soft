@@ -81,11 +81,11 @@ namespace Not.Backend
 
         public bool EliminarGrupo(Grupo grupo)
         {
-            const string query = "DELETE FROM grupo WHERE id = @id";
+            const string query = "DELETE FROM grupo WHERE id_grupo = @id_grupo";
 
             return EjecutarTransaccion(query, cmd =>
             {
-                cmd.Parameters.AddWithValue("@id", grupo.Id);
+                cmd.Parameters.AddWithValue("@id_grupo", grupo.Id);
             });
         }
 

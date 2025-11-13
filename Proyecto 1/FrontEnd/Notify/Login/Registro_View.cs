@@ -3,6 +3,7 @@ using MaterialSkin.Controls;
 using Not.Backend;
 using Proyecto_1.FrontEnd.Login;
 using System;
+using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -73,7 +74,7 @@ namespace Proyecto_1.FrontEnd.Registro
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(248, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Contraseña";
             // 
@@ -82,7 +83,7 @@ namespace Proyecto_1.FrontEnd.Registro
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(248, 194);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Usuario";
             // 
@@ -90,14 +91,14 @@ namespace Proyecto_1.FrontEnd.Registro
             // 
             this.txb_pass.Location = new System.Drawing.Point(251, 258);
             this.txb_pass.Name = "txb_pass";
-            this.txb_pass.Size = new System.Drawing.Size(247, 22);
+            this.txb_pass.Size = new System.Drawing.Size(247, 20);
             this.txb_pass.TabIndex = 8;
             // 
             // txb_usuario
             // 
             this.txb_usuario.Location = new System.Drawing.Point(251, 210);
             this.txb_usuario.Name = "txb_usuario";
-            this.txb_usuario.Size = new System.Drawing.Size(247, 22);
+            this.txb_usuario.Size = new System.Drawing.Size(247, 20);
             this.txb_usuario.TabIndex = 7;
             // 
             // btnRegistrar
@@ -118,13 +119,14 @@ namespace Proyecto_1.FrontEnd.Registro
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Nombre
             // 
             this.Nombre.AutoSize = true;
             this.Nombre.Location = new System.Drawing.Point(248, 289);
             this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(56, 16);
+            this.Nombre.Size = new System.Drawing.Size(44, 13);
             this.Nombre.TabIndex = 13;
             this.Nombre.Text = "Nombre";
             // 
@@ -132,7 +134,7 @@ namespace Proyecto_1.FrontEnd.Registro
             // 
             this.txb_nombre.Location = new System.Drawing.Point(251, 305);
             this.txb_nombre.Name = "txb_nombre";
-            this.txb_nombre.Size = new System.Drawing.Size(247, 22);
+            this.txb_nombre.Size = new System.Drawing.Size(247, 20);
             this.txb_nombre.TabIndex = 12;
             // 
             // label4
@@ -140,7 +142,7 @@ namespace Proyecto_1.FrontEnd.Registro
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(248, 331);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 16);
+            this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 15;
             this.label4.Text = "Correo";
             // 
@@ -148,7 +150,7 @@ namespace Proyecto_1.FrontEnd.Registro
             // 
             this.txb_correo.Location = new System.Drawing.Point(251, 347);
             this.txb_correo.Name = "txb_correo";
-            this.txb_correo.Size = new System.Drawing.Size(247, 22);
+            this.txb_correo.Size = new System.Drawing.Size(247, 20);
             this.txb_correo.TabIndex = 14;
             // 
             // btn_back
@@ -194,7 +196,10 @@ namespace Proyecto_1.FrontEnd.Registro
 
         private void Registro_View_Load(object sender, EventArgs e)
         {
-
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\FrontEnd\images\icons8-microsoft-authenticator-250.png"));
+            pictureBox1.ImageLocation = projectPath;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void btnRegistrar_Click_1(object sender, EventArgs e)
@@ -202,7 +207,7 @@ namespace Proyecto_1.FrontEnd.Registro
             if(validar() == "Válido")
             {
                 Usuario usuario = new Usuario(txb_usuario.Text, txb_pass.Text, txb_nombre.Text, txb_correo.Text);
-                if (usuario.CrearUsuario(usuario))/// 
+                if (usuario.CrearUsuario(usuario))
                 {
                     MessageBox.Show("USUARIO creado exitosamente");
                     Login_View lv = new Login_View();
@@ -236,6 +241,11 @@ namespace Proyecto_1.FrontEnd.Registro
             if (!Regex.Match(txb_correo.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$").Success) return "El correo no tiene un formato válido.";
             
             return "Válido";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

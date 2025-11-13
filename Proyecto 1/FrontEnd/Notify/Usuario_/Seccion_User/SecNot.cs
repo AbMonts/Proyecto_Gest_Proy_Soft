@@ -24,6 +24,11 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User
         {
             this.u = u;
             InitializeComponent();
+
+            // Deshabilitar botones al entrar a la pantalla
+            btn_delete.Enabled = false;
+            btn_update.Enabled = false;
+
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(
@@ -48,6 +53,16 @@ namespace Proyecto_1.FrontEnd.Notify.MENU_USUARIO.Seccion_User
         private void SecNot_Load(object sender, EventArgs e)
         {
             dgv_sec.DataSource = JsonHelper.cargarSeccionJson(rutaArchivoJson);
+            dgv_sec.CellClick += dgv_sec_CellClick;
+            if (dgv_sec.Rows.Count == 0)
+            {
+                btn_delete.Enabled = false;
+                btn_update.Enabled = false;
+            } else
+            {
+                btn_delete.Enabled = true;
+                btn_update.Enabled = true;
+            }
         }
 
         private void btn_back_Click(object sender, EventArgs e)
